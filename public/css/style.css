@@ -1,0 +1,44 @@
+.messageGontainer{
+    max-height: 50vh;
+    overflow-y: auto;
+    background: #b3ffd9;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+.groupBlock{
+    border: 1px solid;
+    margin: 5px;
+}
+.isent{
+    float: right;
+}
+.usent{
+    float: left;
+}
+.message{
+    clear: both;
+    word-break: break-word;
+    text-align: center;
+}
+.message div{
+    background: rgb(238, 237, 160);
+    padding: 15px;
+    border-radius: 10px;
+}
+.sender p{
+    background: white;
+    border-radius: 10px;
+    padding: 10px 0px;
+    margin-bottom: -10px;
+}
+.formContainer{
+    width: 100%;
+}
+.messageForm{
+    width: 80%;
+}
+.sendMessageBtn{
+    width: 19%;
+}
