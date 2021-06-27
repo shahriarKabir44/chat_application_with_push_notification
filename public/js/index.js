@@ -1,6 +1,7 @@
 function getel(x) {
     return document.getElementById(x)
 }
+
 //rendering
 function renderGroupChatComponent(group) {
     var s = `
@@ -29,7 +30,7 @@ function renderMessage(message) {
     var par = getel(`messageContainer${message.receiverId}`)
     par.innerHTML
     var s = ``
-    if (message.senderName == myName) {
+    if (message.senderName == getel('myName').value) {
         s = `<div class="message ">
               <div class="isent"> ${message.body}</div>
             </div>`
@@ -60,8 +61,8 @@ renderGroupChatComponent({
 function leaveRoom(id, name) {
     var newMessage = {
         receiverId: id,
-        body: `${myName} has left!`,
-        senderName: myName,
+        body: `${getel('myName').value} has left!`,
+        senderName: getel('myName').value,
         roomName: name
     }
 
@@ -72,7 +73,7 @@ function sendMessage(id, name) {
     var newMessage = {
         receiverId: id,
         body: getel(`messageText${id}`).value,
-        senderName: myName,
+        senderName: getel('myName').value,
         roomName: name
     }
     socket.emit('groupMessage', name, newMessage)
@@ -82,8 +83,8 @@ function sendMessage(id, name) {
 function joinRoom(id, name) {
     var newMessage = {
         receiverId: id,
-        body: `${myName} has joined!`,
-        senderName: myName,
+        body: `${getel('myName').value} has joined!`,
+        senderName: getel('myName').value,
         roomName: name
     }
     socket.emit('addMe', name, newMessage)

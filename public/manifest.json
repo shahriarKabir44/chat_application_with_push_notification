@@ -1,0 +1,15 @@
+{
+    "name": "PWAMessenger",
+    "short_name": "chat",
+    "start_url": ".",
+    "background_color": "#abcdef",
+    "theme_color": "#053c72",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "403x403",
+            "type": "image/png"
+        }
+    ]
+}

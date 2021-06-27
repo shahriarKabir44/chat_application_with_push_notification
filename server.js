@@ -19,13 +19,7 @@ webPush.setVapidDetails('mailto:abc@def.com', public_key, private_key)
 
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-    res.render('signup.ejs')
-})
-app.post('/', (req, res) => {
-    var data = req.body
-    res.render('index.ejs', data)
-})
+
 
 io.on('connection', socket => {
     socket.on('sendMessage', (data) => {
